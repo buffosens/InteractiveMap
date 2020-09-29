@@ -5813,5 +5813,7 @@
   <use xlink:href="#glyph136-8" x="139.450472" y="983.048284"/>
 </g>
 </g>
-<text class="label" id="house-name" x="10" y="650">This</text>
+
+<text class="label" id="house-name" x="700" y="10">This</text>
+
 </svg>

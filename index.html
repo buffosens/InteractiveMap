@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>SVG test</title>
-</head>
-<body>
-	<object id="svg-object" style="border:1px solid black" data="Data/map.svg" type="image/svg+xml">
-    </object>
-    <script>
-        var svg = document.getElementById("svg-object");
-
-        svg.addEventListener("load",function(){
-            var svgDoc = svg.contentDocument;
-            var svgItem2 = svgDoc.getElementById("house-name");
-            for (i = 0; i < 610; i++) {
-                var svgItem = svgDoc.getElementById(i);
-                if(svgItem){
-                    svgItem.addEventListener('mouseover', function() {
-                        console.log(this.id);
-                        this.style.fill ="white";
-                        svgItem2.firstChild.data = this.id;
-                    });
-
-                    svgItem.addEventListener('mouseout', function() {
-                        console.log("out");
-                        this.style.fill ="rgb(85.098039%,81.568627%,78.823529%)";
-                        svgItem2.firstChild.data = " ";
-                    });
-                }
-            }
-        }, false);
-    </script>
+    <head>
+        <title>SVG test</title>
+    </head>
+    <body>
+        <object id="svg-object" style="border:1px solid black" data="svg/map.svg" type="image/svg+xml"></object>
+        <script src="js/go.js"></script>
+        <div id="1"
+        style="
+            position: absolute;
+            height: 500px;
+            width: 500px;
+            background-color: white;
+            top: 800px;
+            left: 10px;">
+        </div>
+        <div id="2"
+        style="
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background-color: white;
+            top: 10px;
+            left: 1200px;">
+        </div>
     </body>
 </html>
