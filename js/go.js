@@ -26,8 +26,7 @@ readTextFile("../json/house_data.json", function(text){
                     if(data[0].house.data[this.id].id == this.id) {
                         let text = "";
                         text += "<p><h1><strong> ID: " + this.id + "</strong></h1></p>"
-                        text += "<p><h1><strong> Dialect: " + data[0].house.data[this.id].dialect + "</strong></h1></p>"
-                        text += "<p><h1><strong> Adresse: " + data[0].house.data[this.id].address + "</strong></h1></p>"
+                        text += "<p><h1><strong> Adresse: " + data[0].house.data[this.id].street + " " + data[0].house.data[this.id].street_number + "</strong></h1></p>"
                         text += "<p><h1><strong> Baujahr: " + data[0].house.data[this.id].yoc + "</strong></h1></p>"
                         text += "<p><h1><strong> Info: " + data[0].house.data[this.id].info + "</strong></h1></p>"
                         document.getElementById("1").innerHTML = text;
@@ -36,11 +35,6 @@ readTextFile("../json/house_data.json", function(text){
                     else{
                         document.getElementById("1").innerHTML = "<h1><strong>" + this.id + "</strong></h1>";
                         console.log("2");
-                    }
-
-                    if(this.id == 192)
-                    {
-                        document.getElementById("2").innerHTML = '<img src="../img/192.jpeg" alt="Italian Trulli" style="width:400px;"></img>'
                     }
                 });
 
